@@ -115,14 +115,12 @@ function ClimatePage() {
 
       <section className="related">
         <div className="related__inner">
-          <h2 className="related__title">This explainer is part of the wealth, funding and investment practice topic.</h2>
-          <div className="related__grid">
-            <div className="related__copy">
-              <p>Find out more about our work in this area.</p>
-              <a href="#" className="related__btn">Discover more about wealth, funding and investment practice</a>
-            </div>
-            <div className="related__media"><img src={R('climateOther', 'assets/climate-other.jpg')} alt="" /></div>
+          <div className="related__copy">
+            <h2 className="related__title">This explainer is part of the wealth, funding and investment practice topic.</h2>
+            <p>Find out more about our work in this area.</p>
+            <a href="#" className="related__btn">Discover more about wealth, funding and investment practice</a>
           </div>
+          <div className="related__media"><img src={R('climateOther', 'assets/climate-other.jpg')} alt="" /></div>
         </div>
       </section>
     </>
