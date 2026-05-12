@@ -1,0 +1,12 @@
+# Claude Code local config
+.claude/
+
+# Claude Design handoff bundle — chat transcripts and duplicate files
+jrf/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
