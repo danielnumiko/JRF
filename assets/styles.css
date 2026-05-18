@@ -1494,3 +1494,30 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
   max-width: 56ch;
 }
 
+/* ── Large-monitor cap ─────────────────────────────────────────────
+   The design tops out at the 1440 px breakpoint — past that, the
+   full-bleed split layouts stretch in ways they weren't composed for.
+   We cap each split's interior at 1600 px and let the surrounding
+   section background bleed to the viewport edges via a 50/50 gradient
+   that aligns with the split inside, so on a wide monitor it still
+   reads as a single edge-to-edge composition.
+
+   On viewports where the split stacks vertically (≤900 px), revert to
+   a single solid background.
+   ─────────────────────────────────────────────────────────────── */
+
+.hero--cream { background: linear-gradient(to right, var(--cream) 50%, #c4d9e3 50%); }
+.hero--navy  { background: linear-gradient(to right, var(--navy)  50%, #c4d9e3 50%); }
+.hero__split { max-width: 1600px; margin-inline: auto; }
+
+.related { background: linear-gradient(to right, var(--navy) 50%, #d4e2dc 50%); }
+.related__inner { max-width: 1600px; margin-inline: auto; }
+
+.article-meta-strip .article__meta { max-width: 1600px; margin-inline: auto; }
+
+@container stage (max-width: 900px) {
+  .hero--cream { background: var(--cream); }
+  .hero--navy  { background: var(--navy); }
+  .related     { background: var(--navy); }
+}
+
