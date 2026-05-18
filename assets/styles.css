@@ -167,12 +167,19 @@ a { color: inherit; }
 
 /* Stage — frame establishes a container for size-aware components */
 .proto-stage { background: #f1f5f9; }
-.proto-stage--desktop { background: transparent; }
+.proto-stage--desktop { background: #000; padding: 32px 0; }
 .proto-stage__frame {
   background: var(--paper, #fff);
   margin: 0 auto;
   max-width: none;
   width: 100%;
+}
+.proto-stage--desktop .proto-stage__frame {
+  max-width: 1440px;
+  width: calc(100% - 48px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
 }
 .proto-stage--mobile .proto-stage__frame,
 .proto-stage--tablet .proto-stage__frame {
@@ -1492,32 +1499,5 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
   color: var(--navy-soft);
   margin: 0 0 14px;
   max-width: 56ch;
-}
-
-/* ── Large-monitor cap ─────────────────────────────────────────────
-   The design tops out at the 1440 px breakpoint — past that, the
-   full-bleed split layouts stretch in ways they weren't composed for.
-   We cap each split's interior at 1600 px and let the surrounding
-   section background bleed to the viewport edges via a 50/50 gradient
-   that aligns with the split inside, so on a wide monitor it still
-   reads as a single edge-to-edge composition.
-
-   On viewports where the split stacks vertically (≤900 px), revert to
-   a single solid background.
-   ─────────────────────────────────────────────────────────────── */
-
-.hero--cream { background: linear-gradient(to right, var(--cream) 50%, #c4d9e3 50%); }
-.hero--navy  { background: linear-gradient(to right, var(--navy)  50%, #c4d9e3 50%); }
-.hero__split { max-width: 1600px; margin-inline: auto; }
-
-.related { background: linear-gradient(to right, var(--navy) 50%, #d4e2dc 50%); }
-.related__inner { max-width: 1600px; margin-inline: auto; }
-
-.article-meta-strip .article__meta { max-width: 1600px; margin-inline: auto; }
-
-@container stage (max-width: 900px) {
-  .hero--cream { background: var(--cream); }
-  .hero--navy  { background: var(--navy); }
-  .related     { background: var(--navy); }
 }
 
