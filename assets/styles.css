@@ -408,7 +408,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .hero__split { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
 .hero__split-copy {
   background: var(--cream); color: var(--navy);
-  padding: clamp(40px, 5cqi, 72px) clamp(24px, 4cqi, 56px) clamp(48px, 6cqi, 80px) max(clamp(24px, 4cqi, 32px), calc((100vw - 1280px) / 2 + 32px));
+  padding: clamp(40px, 5cqi, 72px) clamp(24px, 4cqi, 56px) clamp(48px, 6cqi, 80px) max(clamp(24px, 4cqi, 32px), calc((100cqi - 1280px) / 2 + 32px));
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
   width: 100%;
 }
