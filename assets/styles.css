@@ -195,7 +195,8 @@ a { color: inherit; }
 }
 
 /* Stage — frame establishes a container for size-aware components */
-.proto-stage { background: #000; overflow-x: auto; }
+.proto-stage { background: #000; }
+.proto-stage--wide { overflow-x: auto; }
 .proto-stage--desktop, .proto-stage--wide { padding: 32px 0; }
 .proto-stage--desktop { --section-pad: 72px; }
 .proto-stage--wide { --section-pad: 96px; }
@@ -231,7 +232,7 @@ a { color: inherit; }
   max-width: calc(100% - 32px);
   box-shadow: 0 16px 40px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: clip;
 }
 .proto-stage--tablet {
   padding: 20px 0;
@@ -241,7 +242,7 @@ a { color: inherit; }
   max-width: calc(100% - 32px);
   box-shadow: 0 16px 40px -16px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* Site header */
