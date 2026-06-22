@@ -163,7 +163,7 @@ function SiteFooter() {
                 <li><a href="#">Cookies</a></li>
                 <li><a href="#">Website terms and conditions</a></li>
                 <li><a href="#">Feedback and complaints</a></li>
-                <li><a href="#">Resources and research</a></li>
+                <li><a href="#">Information for suppliers</a></li>
               </ul>
             </div>
           </div>
