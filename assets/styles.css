@@ -57,9 +57,11 @@
 /* When wrapped in the prototype mobile/tablet/desktop frame, react to the
    frame width instead of the iframe viewport so the "Mobile" tab actually
    triggers mobile typography. */
-/* (container-type lives on the mobile/tablet frame variants only, so desktop
-   sticky positioning isn't trapped by a containment context) */
-.proto-stage__frame { }
+/* container-type on every viewport variant so cqi units (used by hero and
+   related copy padding to align text with the container edge) resolve to
+   the frame width. Sticky still works — the scroll container concern was
+   the now-removed overflow-x:auto on .proto-stage, not container-type. */
+.proto-stage__frame { container-type: inline-size; container-name: stage; }
 @container stage (max-width: 767px) {
   :where(.proto-stage__frame > *) {
     --text-h1: 40px; --text-h2: 32px; --text-h3: 24px; --text-h4: 16px; --text-h5: 12px;
@@ -211,12 +213,6 @@ a { color: inherit; }
   width: calc(100% - 48px);
   border-radius: 8px;
   box-shadow: 0 24px 80px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
-}
-.proto-stage--mobile .proto-stage__frame,
-.proto-stage--tablet .proto-stage__frame,
-.proto-stage--wide .proto-stage__frame {
-  container-type: inline-size;
-  container-name: stage;
 }
 .proto-stage--wide { padding: 32px 24px; }
 .proto-stage--wide .proto-stage__frame {
