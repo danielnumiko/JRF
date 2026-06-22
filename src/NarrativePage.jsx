@@ -48,34 +48,34 @@ function NarrativePage() {
         </div>
       </section>
 
-      <section className="section section--paper" style={{paddingTop: 80, paddingBottom: 80, borderBottom: '1px solid var(--rule)'}}>
+      <section className="section section--paper" style={{borderBottom: '1px solid var(--rule)'}}>
         <div className="container two-col">
           <h2 className="h-section" style={{margin: 0}}>Our mission</h2>
-          <div className="prose-lede">
+          <div className="prose">
             <p>JRF is committed to amplifying the voices of a more diverse pool of storytellers, content creators and strategists that champion social, political, environmental and economic justice.</p>
             <p style={{marginBottom: 0}}>Our goal is to use the power of stories to support and promote narratives that inspire change and nurture a more compassionate and equitable society.</p>
           </div>
         </div>
       </section>
 
-      <section className="section section--cream" style={{paddingTop: 56, paddingBottom: 56}}>
+      <section className="section section--cream">
         <div className="container">
-          <div style={{maxWidth: 760}} className="prose">
+          <div className="prose prose--measure">
           <h2 className="h-section" style={{marginBottom: 20}}>Storytellers</h2>
           <p>The Storytellers Fund was created to support content creators who inspire change through storytelling so they can share their content more widely and reach new audiences. It also acts to diversify the pool of storytellers and content creators who are shaping the conversations around our politics and culture.</p>
           <p>Recognising the power of storytelling in inspiring change, the fund supports the distribution of content and stories with the potential to influence and nurture a more compassionate society.</p>
-          <p style={{margin: 0}}><a href="#" className="text-link">Discover more about the Storytellers Fund.</a></p>
+          <p style={{margin: 0}}><a href="#">Discover more about the Storytellers Fund.</a></p>
           </div>
         </div>
       </section>
 
-      <section className="section section--paper" style={{paddingTop: 56, paddingBottom: 56}}>
+      <section className="section section--paper">
         <div className="container">
-          <div style={{maxWidth: 760}} className="prose">
+          <div className="prose prose--measure">
           <h2 className="h-section" style={{marginBottom: 20}}>Talking about homes</h2>
           <p>To build a more equal society where everyone can thrive, we must ensure access to decent, affordable homes for all. We aim to shift the focus from housing as wealth to homes as essential for a decent life.</p>
-          <p>In collaboration with the <a href="#" className="text-link">Nationwide Foundation</a> and <a href="#" className="text-link">FrameWorks</a>, we've explored public attitudes towards housing, using research to guide conversations on the issues and solutions. From this we have produced a toolkit with resources designed to help anyone discussing housing and homes.</p>
-          <p style={{margin: 0}}><a href="#" className="text-link">Watch our short animation to learn more.</a></p>
+          <p>In collaboration with the <a href="#">Nationwide Foundation</a> and <a href="#">FrameWorks</a>, we've explored public attitudes towards housing, using research to guide conversations on the issues and solutions. From this we have produced a toolkit with resources designed to help anyone discussing housing and homes.</p>
+          <p style={{margin: 0}}><a href="#">Watch our short animation to learn more.</a></p>
           </div>
         </div>
       </section>

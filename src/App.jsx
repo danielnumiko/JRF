@@ -30,9 +30,10 @@ function App() {
 
   const current = PAGES.find(p => p.id === pageId) || PAGES[0];
   const VIEWPORTS = [
-    { id: 'mobile', label: 'Mobile', icon: 'smartphone' },
-    { id: 'tablet', label: 'Tablet', icon: 'tablet' },
-    { id: 'desktop', label: 'Desktop', icon: 'desktop_windows' },
+    { id: 'mobile', label: '320', icon: 'smartphone' },
+    { id: 'tablet', label: '768', icon: 'tablet' },
+    { id: 'desktop', label: '1440', icon: 'laptop' },
+    { id: 'wide', label: '1920', icon: 'desktop_windows' },
   ];
 
   return (

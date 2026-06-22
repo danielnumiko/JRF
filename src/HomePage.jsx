@@ -5,7 +5,7 @@ function HomePage() {
       <section className="hero hero--cream">
         <div className="hero__split">
           <div className="hero__split-copy">
-            <h1>A better future is possible.</h1>
+            <h1 className="h-home">A better future is possible.</h1>
             <p className="hero__lede">At the Joseph Rowntree Foundation, we work to speed up and support the transition to a future free from poverty, in which people and planet can flourish.</p>
             <a href="#" className="btn">Read more about us <span className="btn__arrow">→</span></a>
           </div>
@@ -43,7 +43,7 @@ function HomePage() {
                 <img src={R('latest1', 'assets/latest-1.jpg')} alt="GGI rendering of new houses being built on a construction site" />
               </div>
               <div className="pinned-feed__lead-body">
-                <span className="pinned-feed__item-date pinned-feed__lead-date">29 Apr 2026</span>
+                <span className="pinned-feed__item-date pinned-feed__lead-date">29 April 2026</span>
                 <h3 className="pinned-feed__lead-title">Getting homes built: why social and affordable capacity is key</h3>
                 <p className="pinned-feed__lead-lede">The Government can support housebuilding by increasing the financial capacity of social and affordable housing providers — here's how it could unlock the next 100,000 homes.</p>
                 <Eyebrow tags={["Briefing", "Housing"]} />
@@ -53,16 +53,16 @@ function HomePage() {
             <aside className="pinned-feed__list" aria-label="More from this month">
               <ol className="pinned-feed__items">
                 {[
-                  { date: "27 Apr 2026", title: "Will party manifestos meet Scotland's child poverty targets?", summary: "We assess what the main parties are offering in the run-up to the Holyrood election — and whether it adds up to the action needed.", tags: ["Comment", "Child poverty"] },
-                  { date: "24 Apr 2026", title: "Under pressure: the affordability challenges facing private renters", summary: "New analysis of rent-to-income ratios shows where the squeeze on private renters is becoming most acute.", tags: ["Briefing", "Housing"] },
-                  { date: "22 Apr 2026", title: "Why social infrastructure matters for economic security", summary: "Libraries, community centres and youth clubs aren't a nice-to-have. They are part of what makes economic security possible.", tags: ["Idea", "Communities"] },
-                  { date: "18 Apr 2026", title: "Supporting just and regenerative futures in the North East", summary: "Inside a year-long partnership with civil-society organisations exploring what economic transition could look like locally.", tags: ["Idea", "Power and participation"] },
-                  { date: "17 Apr 2026", title: "Action needed for economically insecure disabled people in Scotland", summary: "Disabled people in Scotland face deepening insecurity. We set out the policy choices that could turn the picture around.", tags: ["Briefing", "Income"] },
-                  { date: "14 Apr 2026", title: "A new framework for thinking about local economic security", summary: "A practical tool for places looking to measure and improve the economic security of their residents.", tags: ["Report"] },
-                  { date: "11 Apr 2026", title: "What the Spring Statement means for low-income families", summary: "The headline measures, the missing pieces, and what the next fiscal event will need to do.", tags: ["Comment", "Cost of living"] },
-                  { date: "08 Apr 2026", title: "Listening to the workers shaping the future of social care", summary: "Care workers tell us what a fair, secure future of work in the sector would look like — and what stands in the way.", tags: ["Idea", "Work"] },
-                  { date: "04 Apr 2026", title: "How the next devolution settlement could shift power", summary: "Looking beyond mayors and combined authorities to the deeper question of who gets to decide.", tags: ["Briefing", "Power and participation"] },
-                  { date: "02 Apr 2026", title: "Reading the small print: housing benefit and the rent cap", summary: "A short explainer on the technical changes that could make a real difference to renters' budgets.", tags: ["Comment", "Housing"] },
+                  { date: "27 April 2026", title: "Will party manifestos meet Scotland's child poverty targets?", summary: "We assess what the main parties are offering in the run-up to the Holyrood election — and whether it adds up to the action needed.", tags: ["Comment", "Child poverty"] },
+                  { date: "24 April 2026", title: "Under pressure: the affordability challenges facing private renters", summary: "New analysis of rent-to-income ratios shows where the squeeze on private renters is becoming most acute.", tags: ["Briefing", "Housing"] },
+                  { date: "22 April 2026", title: "Why social infrastructure matters for economic security", summary: "Libraries, community centres and youth clubs aren't a nice-to-have. They are part of what makes economic security possible.", tags: ["Idea", "Communities"] },
+                  { date: "18 April 2026", title: "Supporting just and regenerative futures in the North East", summary: "Inside a year-long partnership with civil-society organisations exploring what economic transition could look like locally.", tags: ["Idea", "Power and participation"] },
+                  { date: "17 April 2026", title: "Action needed for economically insecure disabled people in Scotland", summary: "Disabled people in Scotland face deepening insecurity. We set out the policy choices that could turn the picture around.", tags: ["Briefing", "Income"] },
+                  { date: "14 April 2026", title: "A new framework for thinking about local economic security", summary: "A practical tool for places looking to measure and improve the economic security of their residents.", tags: ["Report"] },
+                  { date: "11 April 2026", title: "What the Spring Statement means for low-income families", summary: "The headline measures, the missing pieces, and what the next fiscal event will need to do.", tags: ["Comment", "Cost of living"] },
+                  { date: "08 April 2026", title: "Listening to the workers shaping the future of social care", summary: "Care workers tell us what a fair, secure future of work in the sector would look like — and what stands in the way.", tags: ["Idea", "Work"] },
+                  { date: "04 April 2026", title: "How the next devolution settlement could shift power", summary: "Looking beyond mayors and combined authorities to the deeper question of who gets to decide.", tags: ["Briefing", "Power and participation"] },
+                  { date: "02 April 2026", title: "Reading the small print: housing benefit and the rent cap", summary: "A short explainer on the technical changes that could make a real difference to renters' budgets.", tags: ["Comment", "Housing"] },
                 ].map((it, i) => (
                   <li key={i} className="pinned-feed__item">
                     <a href="#" className="pinned-feed__item-link">

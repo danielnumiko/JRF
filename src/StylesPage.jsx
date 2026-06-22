@@ -38,31 +38,54 @@ function StylesPage() {
       <section className="styles-section styles-section--paper">
         <div className="container">
           <h2>Heading scale</h2>
-          <p className="styles-intro">Sizes step at 768&nbsp;px and 1440&nbsp;px breakpoints — the same scale the live JRF site uses.</p>
+          <p className="styles-intro">On the live site, heading sizes jump around a little — some steps are big, some barely change, and a few sit at awkward in-between sizes. This proposed scale tidies that up: headings grow in smooth, even steps as the screen gets bigger, so the hierarchy always feels deliberate. Every size is also pulled from the same underlying scale that controls spacing across the site, which keeps everything aligned and consistent — while still changing at the same screen widths as live, so the experience stays familiar.</p>
+
+          <div className="scale-row">
+            <div className="scale-row__meta">
+              <span className="scale-row__token">Home H1</span>
+              <span className="scale-row__spec">DM Serif Text 400 · home hero only · <code style={{fontSize:'var(--text-xs)',background:'#fff',padding:'1px 5px',borderRadius:3,border:'1px solid var(--rule)'}}>.h-home</code></span>
+              <span className="scale-row__sizes">60 (320) → 72 (768) → 112 (1440) → 144 (1920) px · LH 1.05</span>
+              <span className="scale-row__live">Live: 60 (320) → 70 (768) → 110 (1440) → 145 (1920) · LH 1.14 ✓ match</span>
+            </div>
+            <div className="scale-row__sample"><span className="h-home" style={{display:'block', fontFamily:'var(--font-serif)'}}>Home hero heading</span></div>
+          </div>
 
           <div className="scale-row">
             <div className="scale-row__meta">
               <span className="scale-row__token">H1</span>
               <span className="scale-row__spec">DM Serif Text 400</span>
-              <span className="scale-row__sizes">40 → 58 → 80 px · LH 1.15</span>
+              <span className="scale-row__sizes">40 (320) → 56 (768) → 80 (1440) → 96 (1920) px · LH 1.1</span>
+              <span className="scale-row__live">Live: 40 (320) → 58 (768) → 80 (1440) → 90 (1920) · LH 1.14</span>
             </div>
-            <div className="scale-row__sample"><h1 style={{margin: 0}}>A better future is possible.</h1></div>
+            <div className="scale-row__sample"><h1 style={{margin: 0}}>Hero heading</h1></div>
           </div>
 
           <div className="scale-row">
             <div className="scale-row__meta">
               <span className="scale-row__token">H2</span>
               <span className="scale-row__spec">DM Serif Text 400</span>
-              <span className="scale-row__sizes">30 → 45 → 55 px · LH 1.15</span>
+              <span className="scale-row__sizes">32 (320) → 44 (768) → 60 (1440) → 72 (1920) px · LH 1.1</span>
+              <span className="scale-row__live">Live: 35 (320) → 45 (768) → 55 (1440) → 75 (1920) · LH 1.14</span>
             </div>
             <div className="scale-row__sample"><h2 style={{margin: 0}}>Section heading</h2></div>
           </div>
 
           <div className="scale-row">
             <div className="scale-row__meta">
-              <span className="scale-row__token">H3</span>
-              <span className="scale-row__spec">Lexend 500</span>
-              <span className="scale-row__sizes">24 → 30 → 35 px · LH 1.3</span>
+              <span className="scale-row__token">H3 — serif</span>
+              <span className="scale-row__spec">DM Serif Text 400 · subheadings within article body</span>
+              <span className="scale-row__sizes">24 (320) → 32 (768) → 44 (1440) → 52 (1920) px · LH 1.2</span>
+              <span className="scale-row__live">Live: DM Serif Text (matches)</span>
+            </div>
+            <div className="scale-row__sample"><span style={{margin: 0, fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'var(--text-h3)', lineHeight: 1.2, display: 'block'}}>Article subheading</span></div>
+          </div>
+
+          <div className="scale-row">
+            <div className="scale-row__meta">
+              <span className="scale-row__token">H3 — Lexend</span>
+              <span className="scale-row__spec">Lexend 500 · cards &amp; list-item titles</span>
+              <span className="scale-row__sizes">24 (320) → 32 (768) → 44 (1440) → 52 (1920) px · LH 1.25</span>
+              <span className="scale-row__live">Live: 22 (320) → 25 (768) → 35 (1440) → 40 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h3 style={{margin: 0}}>Card or list-item title</h3></div>
           </div>
@@ -71,7 +94,8 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H4</span>
               <span className="scale-row__spec">Lexend 500</span>
-              <span className="scale-row__sizes">18 → 22 → 25 px · LH 1.25</span>
+              <span className="scale-row__sizes">16 (320) → 24 (768) → 32 (1440) → 36 (1920) px · LH 1.3</span>
+              <span className="scale-row__live">Live: 18 (320) → 22 (768) → 25 (1440) → 30 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h4 style={{margin: 0}}>Inline label / footer column</h4></div>
           </div>
@@ -80,7 +104,8 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H5</span>
               <span className="scale-row__spec">Lexend 500</span>
-              <span className="scale-row__sizes">14 → 16 → 18 px · LH 1.35</span>
+              <span className="scale-row__sizes">12 (320) → 16 (768) → 20 (1440) → 24 (1920) px · LH 1.35</span>
+              <span className="scale-row__live">Live: 18 (320) → 22 (768) → 25 (1440) → 30 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h5 style={{margin: 0}}>Compact card / utility title</h5></div>
           </div>
@@ -93,36 +118,40 @@ function StylesPage() {
           <div className="styles-grid">
             <div className="styles-card">
               <div className="styles-card__label">Body — long-form</div>
-              <p style={{fontSize: 'var(--text-body-lg)', lineHeight: 1.65, fontWeight: 300, margin: 0}}>Narratives shape our understanding of the world, individually and collectively. We are committed to changing the prevailing narratives that distort, divide and uphold injustice.</p>
+              <p style={{fontSize: 'var(--text-body-lg)', lineHeight: 1.6, fontWeight: 300, margin: 0}}>Narratives shape our understanding of the world, individually and collectively. We are committed to changing the prevailing narratives that distort, divide and uphold injustice.</p>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>17 px</dd>
-                <dt>Line height</dt><dd>1.65</dd>
+                <dt>Size</dt><dd>16 → 18 px · steps at 768</dd>
+                <dt>Line height</dt><dd>1.6</dd>
                 <dt>Weight</dt><dd>Lexend 300</dd>
               </dl>
+              <p className="styles-card__live">Live: 16 (320) → 18 (768) px · LH 1.6 ✓ match</p>
             </div>
             <div className="styles-card">
               <div className="styles-card__label">Body — card</div>
               <p style={{fontSize: 'var(--text-body)', lineHeight: 1.5, fontWeight: 300, margin: 0}}>Stories help people connect with each other and the issues that matter. Hear from the people leading change.</p>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>15 px</dd>
+                <dt>Size</dt><dd>16 px · space-4 · fixed</dd>
                 <dt>Line height</dt><dd>1.5</dd>
               </dl>
+              <p className="styles-card__live">Live: 16 px (fixed) · LH 1.5</p>
             </div>
             <div className="styles-card">
               <div className="styles-card__label">Eyebrow tag</div>
               <div className="eyebrow"><span className="eyebrow__tag">Explainer</span><span className="eyebrow__tag">Climate change</span></div>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>12 px uppercase · 0.08em</dd>
+                <dt>Size</dt><dd>12 px · space-3 · fixed</dd>
                 <dt>Treatment</dt><dd>Green outline, rounded</dd>
               </dl>
+              <p className="styles-card__live">Live: 14 px (text-sm, fixed)</p>
             </div>
             <div className="styles-card">
               <div className="styles-card__label">Date eyebrow</div>
               <div style={{fontSize: 'var(--text-meta)', color: 'var(--green)', fontWeight: 500}}>24 February 2026</div>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>13 px · Lexend 500</dd>
+                <dt>Size</dt><dd>12 px · space-3 · fixed</dd>
                 <dt>Colour</dt><dd>Green #007A62</dd>
               </dl>
+              <p className="styles-card__live">Live: 14 px (fixed) · Lexend 500</p>
             </div>
           </div>
         </div>
@@ -140,14 +169,21 @@ function StylesPage() {
               {tok:'space-4', px:16, rem:'1rem'},
               {tok:'space-5', px:20, rem:'1.25rem'},
               {tok:'space-6', px:24, rem:'1.5rem'},
+              {tok:'space-7', px:28, rem:'1.75rem'},
               {tok:'space-8', px:32, rem:'2rem'},
+              {tok:'space-9', px:36, rem:'2.25rem'},
               {tok:'space-10', px:40, rem:'2.5rem'},
+              {tok:'space-11', px:44, rem:'2.75rem'},
               {tok:'space-12', px:48, rem:'3rem'},
+              {tok:'space-13', px:52, rem:'3.25rem'},
               {tok:'space-14', px:56, rem:'3.5rem'},
+              {tok:'space-15', px:60, rem:'3.75rem'},
               {tok:'space-16', px:64, rem:'4rem'},
               {tok:'space-18', px:72, rem:'4.5rem'},
               {tok:'space-20', px:80, rem:'5rem'},
               {tok:'space-24', px:96, rem:'6rem'},
+              {tok:'space-28', px:112, rem:'7rem'},
+              {tok:'space-36', px:144, rem:'9rem'},
             ].map(s => (
               <div className="space-row" key={s.tok}>
                 <span className="space-row__token">{s.tok}</span>
@@ -156,66 +192,6 @@ function StylesPage() {
                 <span className="space-row__rem">{s.rem}</span>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="styles-section">
-        <div className="container">
-          <h2>Padding &amp; margin tokens</h2>
-          <p className="styles-intro">Where each token lives in the system.</p>
-          <div className="styles-grid">
-            <div className="styles-card">
-              <div className="styles-card__label">Section padding (vertical)</div>
-              <dl className="styles-meta">
-                <dt>Default</dt><dd>72 px top / bottom · <code>space-18</code></dd>
-                <dt>Compact</dt><dd>56 px · <code>space-14</code></dd>
-                <dt>Generous</dt><dd>96 px · <code>space-24</code></dd>
-                <dt>Mobile (≤700px)</dt><dd>48 px · <code>space-12</code></dd>
-              </dl>
-            </div>
-            <div className="styles-card">
-              <div className="styles-card__label">Container gutters (horizontal)</div>
-              <dl className="styles-meta">
-                <dt>Desktop</dt><dd>32 px · <code>space-8</code></dd>
-                <dt>Tablet</dt><dd>24 px · <code>space-6</code></dd>
-                <dt>Mobile</dt><dd>20 px · <code>space-5</code></dd>
-              </dl>
-            </div>
-            <div className="styles-card">
-              <div className="styles-card__label">Grid &amp; flex gaps</div>
-              <dl className="styles-meta">
-                <dt>Card grid</dt><dd>32 px · <code>space-8</code></dd>
-                <dt>Two-column layout</dt><dd>64 px · <code>space-16</code></dd>
-                <dt>Tight (chips, nav)</dt><dd>8 – 16 px · <code>space-2 / space-4</code></dd>
-              </dl>
-            </div>
-            <div className="styles-card">
-              <div className="styles-card__label">Heading margins</div>
-              <dl className="styles-meta">
-                <dt>Section H2 → body</dt><dd>32 px below · <code>space-8</code></dd>
-                <dt>Article H2 above</dt><dd>72 px · <code>space-18</code></dd>
-                <dt>Article H3 above</dt><dd>56 px · <code>space-14</code></dd>
-                <dt>Paragraph below</dt><dd>18 px (~<code>space-5</code>)</dd>
-              </dl>
-            </div>
-            <div className="styles-card">
-              <div className="styles-card__label">Button &amp; control padding</div>
-              <dl className="styles-meta">
-                <dt>Primary button</dt><dd>14 px × 32 px</dd>
-                <dt>Newsletter CTA</dt><dd>22 px × 48 px</dd>
-                <dt>Card body</dt><dd>20 px</dd>
-              </dl>
-            </div>
-            <div className="styles-card">
-              <div className="styles-card__label">Radius &amp; rules</div>
-              <dl className="styles-meta">
-                <dt>Card / control radius</dt><dd>2 px (sharp)</dd>
-                <dt>Avatar / circle</dt><dd>999 px</dd>
-                <dt>Hairline rule</dt><dd>1 px solid <code>#15263B1A</code></dd>
-                <dt>Bold rule (meta strip)</dt><dd>2 px solid navy</dd>
-              </dl>
-            </div>
           </div>
         </div>
       </section>

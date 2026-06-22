@@ -3,6 +3,16 @@
 // Helper for offline bundling — falls back to local path in dev.
 window.R = window.R || function (id, fallback) { return (window.__resources && window.__resources[id]) || fallback; };
 
+function JrfLogo() {
+  return (
+    <svg className="jrf-logo" viewBox="0 0 140 140" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M70.087 0C31.2872 0 0 31.2872 0 69.913C0 108.539 31.2872 140 70.087 140C108.887 140 140 108.713 140 69.913C140 31.1131 108.713 0 70.087 0ZM105.393 67.2897C107.14 67.2897 109.937 67.989 111.51 67.989C113.083 67.989 113.956 67.8149 114.482 67.6378C114.482 70.2581 111.858 73.7548 109.064 73.7548C106.618 73.7548 104.871 72.8814 102.947 72.8814C101.374 72.8814 100.501 73.2295 99.9756 73.4066V97.3523H93.5074V46.3155H115.355L117.801 52.2584H100.15L99.9756 70.087C101.374 67.989 103.646 67.2897 105.393 67.2897ZM34.7809 93.3333C40.3756 93.1593 40.7238 88.4379 40.7238 83.0203V52.4324H22.8951L25.3413 46.4895H47.1889V82.8432C47.1889 92.4569 42.4706 98.2226 35.129 98.2226C28.838 98.2226 23.4173 94.903 23.2432 87.7355C23.0692 82.3179 25.8665 80.394 28.4868 80.394C31.107 80.394 32.5057 81.9667 32.5057 84.0647C32.5057 86.3368 30.4077 87.9096 27.7874 87.7355C27.9615 89.1342 29.1861 93.5044 34.7778 93.3272L34.7809 93.3333ZM65.5428 74.4572H60.8246V97.3523H54.3564V46.4926C58.7265 42.4737 66.2422 41.075 70.2611 41.075C74.28 41.075 87.0393 42.8218 87.0393 58.2043C87.0393 65.72 81.4476 71.3117 75.8528 73.2356L88.7861 97.3553H81.2704L70.4352 76.7323C69.2106 74.2862 67.6378 74.4602 65.5398 74.4602L65.5428 74.4572Z"></path>
+      <path d="M80.4001 57.679C80.4001 51.2109 76.0299 47.1919 69.7389 47.1919C65.1947 47.1919 62.0492 48.5906 60.8246 49.464V68.8655H69.913C76.3781 68.8655 80.4001 63.2738 80.4001 57.679Z"></path>
+    </svg>
+  );
+}
+window.JrfLogo = JrfLogo;
+
 function SiteHeader() {
   const open = null;
   const onEnter = () => {};
@@ -11,11 +21,11 @@ function SiteHeader() {
     <header className="site-header">
       <div className="site-header__inner">
         <a href="#" className="site-logo" aria-label="Joseph Rowntree Foundation home">
-          <span className="site-logo__circle">JRF</span>
+          <JrfLogo />
         </a>
         <nav className="site-nav" aria-label="Primary">
           <div className="site-nav__item" onMouseEnter={() => onEnter('topics')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'topics'}>Topics <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+            <button type="button" aria-expanded={open === 'topics'}><span className="site-nav__label">Topics</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'topics' && (
               <div className="site-nav__panel">
                 <a href="#">Climate change</a>
@@ -31,7 +41,7 @@ function SiteHeader() {
             )}
           </div>
           <div className="site-nav__item" onMouseEnter={() => onEnter('news')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'news'}>News and events <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+            <button type="button" aria-expanded={open === 'news'}><span className="site-nav__label">News and events</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'news' && (
               <div className="site-nav__panel">
                 <a href="#">News</a>
@@ -42,10 +52,10 @@ function SiteHeader() {
             )}
           </div>
           <div className="site-nav__item">
-            <button type="button">UK poverty statistics</button>
+            <button type="button"><span className="site-nav__label">UK poverty statistics</span></button>
           </div>
           <div className="site-nav__item" onMouseEnter={() => onEnter('about')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'about'}>About <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+            <button type="button" aria-expanded={open === 'about'}><span className="site-nav__label">About</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'about' && (
               <div className="site-nav__panel">
                 <a href="#">Vision, mission and principles</a>
@@ -111,7 +121,7 @@ function SiteFooter() {
         <div className="container">
           <div className="footer-main">
             <div className="footer-brand footer-col--brand">
-              <span className="site-logo__circle">JRF</span>
+              <JrfLogo />
               <dl className="footer-co">
                 <div><dt>Company Number:</dt><dd>12132713</dd></div>
                 <div><dt>Charity Number (Scotland):</dt><dd>SC049712</dd></div>

@@ -14,13 +14,13 @@ function ClimatePage() {
       <section className="article-hero-top article-hero-top--navy">
         <div className="container">
           <div className="article-hero-top__main">
-            <Eyebrow tags={["Explainer"]} variant="onDark" />
-            <h1>Social investment opportunities for funds supporting UK climate justice</h1>
-            <p className="article-hero-top__lede">Climate justice is one of our new social investment themes. We're looking to invest into funds supporting community renewable energy projects.</p>
-            <div className="topic-tags">
+            <div className="article-hero-top__tagrow">
+              <Eyebrow tags={["Explainer"]} variant="onDark" />
               <a href="#" className="topic-tag">Wealth, funding and investment practice</a>
               <a href="#" className="topic-tag">Climate change</a>
             </div>
+            <h1>Social investment opportunities for funds supporting UK climate justice</h1>
+            <p className="article-hero-top__lede">Climate justice is one of our new social investment themes. We're looking to invest into funds supporting community renewable energy projects.</p>
           </div>
         </div>
       </section>
@@ -77,6 +77,7 @@ function ClimatePage() {
               <h2>Investment focus on community and local energy</h2>
               <p>Although NPC's research highlighted the breadth of need and opportunity in climate justice investing, we decided that a focused approach was appropriate for JRF. We only make a very small number of social investments every year, and climate justice is one of many themes we cover, so we need to specialise. We applied the JRF lens — mission, vision, focus areas — to the NPC findings, and were very fortunate to be able to benefit from the insights of <a href="#">Erinch Sahan</a> who joined JRF as Associate Director for Investment in September.</p>
               <p>We have selected community and local energy projects as our sub-theme to focus on, especially:</p>
+              <h3>What we look for</h3>
               <ul>
                 <li>community-owned energy projects, especially where communities are disadvantaged</li>
                 <li>shared community ownership of larger-scale energy infrastructure</li>
