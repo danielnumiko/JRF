@@ -446,13 +446,13 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 }
 .breadcrumb a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
 .breadcrumb li:last-child::after {
-  content: '›';
+  content: '▸';
   margin-left: 10px;
   color: var(--green);
   font-weight: 600;
 }
 .breadcrumb li + li::before {
-  content: '›';
+  content: '▸';
   margin-right: 10px;
   color: var(--green);
   font-weight: 600;
