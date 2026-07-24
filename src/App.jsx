@@ -4,6 +4,7 @@ const PAGES = [
   { id: 'home', label: 'Home', Comp: () => <HomePage /> },
   { id: 'narrative', label: 'Narrative change', Comp: () => <NarrativePage /> },
   { id: 'climate', label: 'Climate justice', Comp: () => <ClimatePage /> },
+  { id: 'people', label: 'Our people', Comp: () => <PeoplePage /> },
   { id: 'styles', label: 'Styles', Comp: () => <StylesPage /> },
 ];
 
