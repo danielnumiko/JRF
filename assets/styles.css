@@ -952,6 +952,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .jumplinks__current-title { font-size: var(--text-body); }
 .jumplinks__toggle { display: inline-flex; align-items: center; gap: var(--space-2, 8px); background: none; border: 0; color: #fff; font: inherit; font-size: var(--text-body); cursor: pointer; padding: 0; }
 .jumplinks__toggle:hover { text-decoration: underline; text-underline-offset: 4px; }
+.jumplinks__toggle:hover .jumplinks__toggle-icon { text-decoration: none; }
 .jumplinks__toggle-icon { transition: transform 0.2s ease; }
 .jumplinks.is-open .jumplinks__toggle-icon { transform: rotate(180deg); }
 .jumplinks--pinned .jumplinks__panel { background: #212530; color: #fff; border-top: 2px solid rgba(160,215,227,0.2); overflow: hidden; max-height: 0; transition: max-height 0.3s ease; }
