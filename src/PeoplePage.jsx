@@ -220,10 +220,16 @@ function PeoplePage() {
 
       <div className="jumplinks-sentinel" aria-hidden="true"></div>
 
-      <nav className="jumplinks jumplinks--inline" aria-label="On this page">
+      <nav className="jumplinks jumplinks--inline" aria-label="You are currently viewing">
         <div className="jumplinks__panel jumplinks__panel--static">
           <div className="container">
-            <p className="jumplinks__inline-label">On this page</p>
+            <div className="jumplinks__current jumplinks__current--inline">
+              <span className="jumplinks__current-label">You are currently viewing:</span>
+              <span className="jumplinks__current-title">{current}</span>
+            </div>
+          </div>
+          <hr className="jumplinks__keyline" aria-hidden="true" />
+          <div className="container">
             <ul className="jumplinks__grid">
               {sections.map(s => (
                 <li key={s.id}><a href={"#" + s.id} onClick={(e) => jump(e, s.id)}>{s.title}</a></li>

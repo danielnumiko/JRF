@@ -957,12 +957,13 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .jumplinks--pinned .jumplinks__panel { background: #212530; color: #fff; border-top: 2px solid rgba(160,215,227,0.2); overflow: hidden; max-height: 0; transition: max-height 0.3s ease; }
 .jumplinks--pinned.is-open .jumplinks__panel { max-height: 80vh; }
 .jumplinks__panel { background: #212530; color: #fff; }
-.jumplinks__grid { list-style: none; margin: 0; padding: var(--space-7, 28px) 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3, 12px) var(--space-8, 32px); }
+.jumplinks__grid { list-style: none; margin: 0; padding: var(--space-7, 28px) 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3, 12px) var(--space-8, 32px); }
 .jumplinks__grid a { color: #fff; text-decoration: none; font-size: var(--text-body); font-weight: 300; }
 .jumplinks__grid a:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px; }
-@container stage (max-width: 1024px) { .jumplinks__grid { grid-template-columns: repeat(3, 1fr); } }
 @container stage (max-width: 768px) { .jumplinks__grid { grid-template-columns: 1fr 1fr; } }
 @container stage (max-width: 420px) { .jumplinks__grid { grid-template-columns: 1fr; } }
+.jumplinks__keyline { border: 0; border-top: 1px solid rgba(160,215,227,0.3); margin: 0; height: 0; }
+.jumplinks--inline .jumplinks__current--inline { display: flex; flex-direction: column; padding: var(--space-6, 24px) 0 var(--space-6, 24px); }
 .people-jump { background: var(--navy); position: sticky; top: 0; z-index: 20; display: none; }
 .people-jump__list { list-style: none; margin: 0; padding: var(--space-3, 12px) 0; display: flex; flex-wrap: wrap; gap: var(--space-2, 8px) var(--space-5, 20px); }
 .people-jump__list a { color: #fff; text-decoration: none; font-size: var(--text-body); font-weight: 300; }
