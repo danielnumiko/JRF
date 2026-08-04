@@ -220,11 +220,11 @@ function PeoplePage() {
 
       <div className="jumplinks-sentinel" aria-hidden="true"></div>
 
-      <nav className="jumplinks jumplinks--inline" aria-label="You are currently viewing">
+      <nav className="jumplinks jumplinks--inline" aria-label="You are currently reading">
         <div className="jumplinks__panel jumplinks__panel--static">
           <div className="container">
             <div className="jumplinks__current jumplinks__current--inline">
-              <span className="jumplinks__current-label">You are currently viewing:</span>
+              <span className="jumplinks__current-label">You are currently reading:</span>
               <span className="jumplinks__current-title">{current}</span>
             </div>
           </div>
@@ -243,7 +243,7 @@ function PeoplePage() {
         <div className="jumplinks__bar">
           <div className="container jumplinks__bar-inner">
             <span className="jumplinks__current">
-              <span className="jumplinks__current-label">You are currently viewing:</span>
+              <span className="jumplinks__current-label">You are currently reading:</span>
               <span className="jumplinks__current-title">{current}</span>
             </span>
             <button type="button" className="jumplinks__toggle" aria-expanded={navOpen} aria-controls="jumplinks-list" tabIndex={pinned ? 0 : -1} onClick={() => { userToggled.current = true; setNavOpen(o => !o); }}>
