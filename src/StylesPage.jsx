@@ -44,7 +44,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">Home H1</span>
               <span className="scale-row__spec">DM Serif Text 400 · home hero only · <code style={{fontSize:'var(--text-xs)',background:'#fff',padding:'1px 5px',borderRadius:3,border:'1px solid var(--rule)'}}>.h-home</code></span>
-              <span className="scale-row__sizes">60 (320) → 72 (768) → 112 (1440) → 144 (1920) px · LH 1.05</span>
+              <span className="scale-row__sizes">60 (320) → 70 (768) → 110 (1440) → 144 (1920) px · LH 1.05</span>
               <span className="scale-row__live">Live: 60 (320) → 70 (768) → 110 (1440) → 145 (1920) · LH 1.14 ✓ match</span>
             </div>
             <div className="scale-row__sample"><span className="h-home" style={{display:'block', fontFamily:'var(--font-serif)'}}>Home hero heading</span></div>
@@ -54,7 +54,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H1</span>
               <span className="scale-row__spec">DM Serif Text 400</span>
-              <span className="scale-row__sizes">40 (320) → 56 (768) → 80 (1440) → 96 (1920) px · LH 1.1</span>
+              <span className="scale-row__sizes">40 (320) → 50 (768) → 64 (1440) → 84 (1920) px · LH 1.1</span>
               <span className="scale-row__live">Live: 40 (320) → 58 (768) → 80 (1440) → 90 (1920) · LH 1.14</span>
             </div>
             <div className="scale-row__sample"><h1 style={{margin: 0}}>Hero heading</h1></div>
@@ -64,7 +64,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H2</span>
               <span className="scale-row__spec">DM Serif Text 400</span>
-              <span className="scale-row__sizes">32 (320) → 44 (768) → 60 (1440) → 72 (1920) px · LH 1.1</span>
+              <span className="scale-row__sizes">36 (320) → 44 (768) → 56 (1440) → 76 (1920) px · LH 1.1</span>
               <span className="scale-row__live">Live: 35 (320) → 45 (768) → 55 (1440) → 75 (1920) · LH 1.14</span>
             </div>
             <div className="scale-row__sample"><h2 style={{margin: 0}}>Section heading</h2></div>
@@ -74,7 +74,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H3 — serif</span>
               <span className="scale-row__spec">DM Serif Text 400 · subheadings within article body</span>
-              <span className="scale-row__sizes">24 (320) → 32 (768) → 44 (1440) → 52 (1920) px · LH 1.2</span>
+              <span className="scale-row__sizes">22 (320) → 30 (768) → 36 (1440) → 40 (1920) px · LH 1.2</span>
               <span className="scale-row__live">Live: DM Serif Text (matches)</span>
             </div>
             <div className="scale-row__sample"><span style={{margin: 0, fontFamily: 'var(--font-serif)', fontWeight: 400, fontSize: 'var(--text-h3)', lineHeight: 1.2, display: 'block'}}>Article subheading</span></div>
@@ -84,7 +84,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H3 — Lexend</span>
               <span className="scale-row__spec">Lexend 500 · cards &amp; list-item titles</span>
-              <span className="scale-row__sizes">24 (320) → 32 (768) → 44 (1440) → 52 (1920) px · LH 1.25</span>
+              <span className="scale-row__sizes">22 (320) → 30 (768) → 36 (1440) → 40 (1920) px · LH 1.25</span>
               <span className="scale-row__live">Live: 22 (320) → 25 (768) → 35 (1440) → 40 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h3 style={{margin: 0}}>Card or list-item title</h3></div>
@@ -94,7 +94,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H4</span>
               <span className="scale-row__spec">Lexend 500</span>
-              <span className="scale-row__sizes">16 (320) → 24 (768) → 32 (1440) → 36 (1920) px · LH 1.3</span>
+              <span className="scale-row__sizes">18 (320) → 22 (768) → 24 (1440) → 30 (1920) px · LH 1.3</span>
               <span className="scale-row__live">Live: 18 (320) → 22 (768) → 25 (1440) → 30 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h4 style={{margin: 0}}>Inline label / footer column</h4></div>
@@ -104,7 +104,7 @@ function StylesPage() {
             <div className="scale-row__meta">
               <span className="scale-row__token">H5</span>
               <span className="scale-row__spec">Lexend 500</span>
-              <span className="scale-row__sizes">12 (320) → 16 (768) → 20 (1440) → 24 (1920) px · LH 1.35</span>
+              <span className="scale-row__sizes">18 (320) → 22 (768) → 24 (1440) → 30 (1920) px · LH 1.35</span>
               <span className="scale-row__live">Live: 18 (320) → 22 (768) → 25 (1440) → 30 (1920) · LH 1.25</span>
             </div>
             <div className="scale-row__sample"><h5 style={{margin: 0}}>Compact card / utility title</h5></div>
@@ -120,11 +120,11 @@ function StylesPage() {
               <div className="styles-card__label">Body — long-form</div>
               <p style={{fontSize: 'var(--text-body-lg)', lineHeight: 1.6, fontWeight: 300, margin: 0}}>Narratives shape our understanding of the world, individually and collectively. We are committed to changing the prevailing narratives that distort, divide and uphold injustice.</p>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>16 → 18 px · steps at 768</dd>
+                <dt>Size</dt><dd>16 → 18 → 20 → 22 px · steps at 768 / 1440 / 1920</dd>
                 <dt>Line height</dt><dd>1.6</dd>
                 <dt>Weight</dt><dd>Lexend 300</dd>
               </dl>
-              <p className="styles-card__live">Live: 16 (320) → 18 (768) px · LH 1.6 ✓ match</p>
+              <p className="styles-card__live">Live: 16 (320) → 18 (768) → 22 (1440) px · LH 1.6</p>
             </div>
             <div className="styles-card">
               <div className="styles-card__label">Body — card</div>
@@ -146,9 +146,9 @@ function StylesPage() {
             </div>
             <div className="styles-card">
               <div className="styles-card__label">Date eyebrow</div>
-              <div style={{fontSize: 'var(--text-meta)', color: 'var(--green)', fontWeight: 500}}>24 February 2026</div>
+              <div style={{fontSize: 'var(--text-meta)', color: 'var(--green)', fontWeight: 500}}>13 August 2026</div>
               <dl className="styles-meta">
-                <dt>Size</dt><dd>12 px · space-3 · fixed</dd>
+                <dt>Size</dt><dd>14 → 16 → 18 → 20 px · <code>--text-date</code></dd>
                 <dt>Colour</dt><dd>Green #007A62</dd>
               </dl>
               <p className="styles-card__live">Live: 14 px (fixed) · Lexend 500</p>
@@ -204,6 +204,7 @@ function StylesPage() {
             <div className="swatch"><div className="swatch__chip" style={{background: '#0E1822'}}></div><div className="swatch__label">Footer navy<span>#0E1822</span></div></div>
             <div className="swatch"><div className="swatch__chip" style={{background: '#F4F0E7'}}></div><div className="swatch__label">Cream<span>#F4F0E7</span></div></div>
             <div className="swatch"><div className="swatch__chip" style={{background: '#A0D7E3'}}></div><div className="swatch__label">Sky<span>#A0D7E3</span></div></div>
+            <div className="swatch"><div className="swatch__chip" style={{background: '#8DFCFC'}}></div><div className="swatch__label">Hover cyan<span>#8DFCFC</span></div></div>
             <div className="swatch"><div className="swatch__chip" style={{background: '#007A62'}}></div><div className="swatch__label">Green<span>#007A62</span></div></div>
             <div className="swatch"><div className="swatch__chip" style={{background: '#FFFFFF', border: '1px solid var(--rule)'}}></div><div className="swatch__label">White<span>#FFFFFF</span></div></div>
           </div>

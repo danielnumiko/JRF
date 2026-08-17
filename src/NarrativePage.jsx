@@ -12,18 +12,18 @@ function NarrativePage() {
   ];
 
   const items = [
-    { date: "2 April 2026", tags: ["Reflection", "Neighbourhoods and communities", "Narrative change", "Power and participation"], title: "Capturing hope and resilience in communities tackling hardship", body: "Over the past 3 years, JRF has been on a learning journey, working with community groups across the UK, to develop a more ethical, representative approach to our visual storytelling, with co-creation at the centre." },
-    { date: "23 February 2026", tags: ["Reflection", "Imagination infrastructures", "Narrative change"], title: "Why Futures in Draft matters to us all", body: "After nearly two years of collaboration, Storythings and JRF are launching Futures in Draft — a new platform sharing the people and stories transforming our tomorrow." },
-    { date: "6 February 2026", tags: ["Resource", "Narrative change", "Housing"], title: "Talking about Homes: 3 top tips for effective explanation", body: "Our current housing system isn't working for everyone. Here's how to explain why, build understanding, counteract fatalism, and increase support for solutions." },
-    { date: "1 December 2025", tags: ["Reflection", "Narrative change", "Housing"], title: "What we've learnt about changing the narrative on homes through framing", body: "Looking back on the Talking about Homes project so far, how we've engaged with the sector, what organisational circumstances help mobilise framing, and the programme's next steps." },
-    { date: "5 November 2025", tags: ["Resource", "Narrative change", "Housing", "Power and participation"], title: "Talking about Homes: framing stories from lived experience", body: "Stories rooted in lived experience can bring housing issues to life by revealing what isn't working, highlighting the solutions we need, and helping to build understanding through careful, considered framing." },
-    { date: "8 October 2025", tags: ["Resource", "Narrative change", "Housing"], title: "How to talk about supported housing", body: "A practical communications guide to increase support for decent, affordable supported housing." },
-    { date: "9 June 2025", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Talking about wealth inequality", body: "Looking at perceptions of, and attitudes towards, wealth and wealth inequality — and how to increase public support for a fairer distribution." },
-    { date: "28 November 2024", tags: ["Resource", "Narrative change", "Housing"], title: "Building consensus for building homes", body: "A practical communications guide to increase support for building homes in communities." },
-    { date: "27 June 2024", tags: ["Resource", "Narrative change", "Housing"], title: "How to talk about private renting", body: "This guide will help you communicate why improving renting is a vital part of ensuring everyone in the UK has a decent, affordable home." },
-    { date: "23 May 2024", tags: ["Explainer", "Narrative change", "Housing"], title: "How to talk about homes: a short animation", body: "A short animation giving you an overview of the obstacles we face when we talk about homes and how to overcome them with effective framing." },
-    { date: "2 May 2024", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Effects of the framing of wealth inequality: a literature review", body: "What does the academic evidence base tell us about the effects of framing on the public understanding of, and engagement with, wealth inequality?" },
-    { date: "2 May 2024", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Changing the narrative on wealth inequality", body: "New approaches to framing wealth inequality as a social problem could build political pressure for change." },
+    { date: "14 August 2026", tags: ["Reflection", "Neighbourhoods and communities", "Narrative change", "Power and participation"], title: "Capturing hope and resilience in communities tackling hardship", body: "Over the past 3 years, JRF has been on a learning journey, working with community groups across the UK, to develop a more ethical, representative approach to our visual storytelling, with co-creation at the centre." },
+    { date: "30 July 2026", tags: ["Reflection", "Imagination infrastructures", "Narrative change"], title: "Why Futures in Draft matters to us all", body: "After nearly two years of collaboration, Storythings and JRF are launching Futures in Draft — a new platform sharing the people and stories transforming our tomorrow." },
+    { date: "16 July 2026", tags: ["Resource", "Narrative change", "Housing"], title: "Talking about Homes: 3 top tips for effective explanation", body: "Our current housing system isn't working for everyone. Here's how to explain why, build understanding, counteract fatalism, and increase support for solutions." },
+    { date: "24 June 2026", tags: ["Reflection", "Narrative change", "Housing"], title: "What we've learnt about changing the narrative on homes through framing", body: "Looking back on the Talking about Homes project so far, how we've engaged with the sector, what organisational circumstances help mobilise framing, and the programme's next steps." },
+    { date: "28 May 2026", tags: ["Resource", "Narrative change", "Housing", "Power and participation"], title: "Talking about Homes: framing stories from lived experience", body: "Stories rooted in lived experience can bring housing issues to life by revealing what isn't working, highlighting the solutions we need, and helping to build understanding through careful, considered framing." },
+    { date: "30 April 2026", tags: ["Resource", "Narrative change", "Housing"], title: "How to talk about supported housing", body: "A practical communications guide to increase support for decent, affordable supported housing." },
+    { date: "12 March 2026", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Talking about wealth inequality", body: "Looking at perceptions of, and attitudes towards, wealth and wealth inequality — and how to increase public support for a fairer distribution." },
+    { date: "20 February 2026", tags: ["Resource", "Narrative change", "Housing"], title: "Building consensus for building homes", body: "A practical communications guide to increase support for building homes in communities." },
+    { date: "15 January 2026", tags: ["Resource", "Narrative change", "Housing"], title: "How to talk about private renting", body: "This guide will help you communicate why improving renting is a vital part of ensuring everyone in the UK has a decent, affordable home." },
+    { date: "4 December 2025", tags: ["Explainer", "Narrative change", "Housing"], title: "How to talk about homes: a short animation", body: "A short animation giving you an overview of the obstacles we face when we talk about homes and how to overcome them with effective framing." },
+    { date: "13 November 2025", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Effects of the framing of wealth inequality: a literature review", body: "What does the academic evidence base tell us about the effects of framing on the public understanding of, and engagement with, wealth inequality?" },
+    { date: "13 November 2025", tags: ["Report", "Narrative change", "Wealth, funding and investment practice"], title: "Changing the narrative on wealth inequality", body: "New approaches to framing wealth inequality as a social problem could build political pressure for change." },
   ];
 
   return (
@@ -90,7 +90,7 @@ function NarrativePage() {
                 <div className="card__media">
                   <img src={R('toolkit'+(i+1), `assets/toolkit-${i+1}.png`)} alt="" />
                 </div>
-                <h3 className="card__title">{c.title}</h3>
+                <h3 className="card__title"><span className="u-line">{c.title}</span></h3>
                 <Eyebrow tags={c.tags} variant="onDark" />
               </a>
             ))}
@@ -121,7 +121,7 @@ function NarrativePage() {
               {items.map((it, i) => (
                 <a key={i} href="#" className="list-item">
                   <div className="list-item__date"><time>{it.date}</time></div>
-                  <h3 className="list-item__title">{it.title}</h3>
+                  <h3 className="list-item__title"><span className="u-line">{it.title}</span></h3>
                   <p className="list-item__body">{it.body}</p>
                   <Eyebrow tags={it.tags} />
                 </a>
@@ -197,6 +197,23 @@ function NarrativePage() {
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#007a62" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><polyline points="3,7 12,13 21,7"/></svg>
                     </span>
                     <a href="mailto:cassandra.walker@jrf.org.uk">cassandra.walker@jrf.org.uk</a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article className="expert">
+              <div className="expert__photo">
+                <img src={R('expert4', 'https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJvYXV0aCI6eyJjbGllbnRfaWQiOiJjbGllbnQtbXpxYnlrbHNmdGR6aDd1dyJ9LCJwYXRoIjoiam9zZXBoLXJvd250cmVlLWZvdW5kYXRpb25cL2ZpbGVcL0JnakpiNDN0bnp6SEQ4VUcydWlpLmpwZyJ9:joseph-rowntree-foundation:GY6fKPiDB_IBkMjgWBM2FDvFRIxiCaYJm9HnURfitEk?width=750&height=750')} alt="Peter Matejic" loading="lazy" />
+              </div>
+              <div className="expert__body">
+                <h3 className="expert__name"><a href="#">Peter Matejic</a></h3>
+                <p className="expert__role">Chief Analyst</p>
+                <ul className="expert__contact">
+                  <li>
+                    <span className="expert__icon" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#007a62" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><polyline points="3,7 12,13 21,7"/></svg>
+                    </span>
+                    <a href="mailto:peter.matejic@jrf.org.uk">peter.matejic@jrf.org.uk</a>
                   </li>
                 </ul>
               </div>

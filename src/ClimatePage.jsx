@@ -36,7 +36,7 @@ function ClimatePage() {
           </div>
           <div>
             <dt>Date published:</dt>
-            <dd><time>18 December 2025</time></dd>
+            <dd><time>11 August 2026</time></dd>
           </div>
           <div>
             <dt>Reading time:</dt>

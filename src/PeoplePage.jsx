@@ -107,23 +107,12 @@ function PeoplePage() {
     { name: "Jaspal Sian", role: "Investment Portfolio Manager", img: FR+"eyJvYXV0aCI6eyJjbGllbnRfaWQiOiJjbGllbnQtbXpxYnlrbHNmdGR6aDd1dyJ9LCJwYXRoIjoiam9zZXBoLXJvd250cmVlLWZvdW5kYXRpb25cL2ZpbGVcL3dXVUc4SzE1TWJqa2lob2RUTXZCLmpwZyJ9:joseph-rowntree-foundation:YRaZdMp62z2YNWoc_j25azvUUjfLgLF5BeIjRugPJUc?width=750&height=750", email: "jaspal.sian@jrf.org.uk" },
   ];
 
-  const MailIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><polyline points="3,7 12,13 21,7"/></svg>);
-  const LinkedInIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 11.001-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>);
-  const XIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 10.6L20.9 2h-1.8l-6.4 7.5L7.6 2H2l7.8 11.4L2 22h1.8l6.8-7.9L16.1 22H22l-8.5-11.4z"/></svg>);
-  const BlueskyIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364-3.911.58-7.386 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308.687-6.498-3.224-7.078 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/></svg>);
-
   const Person = ({ name, role, img, email, linkedin, x, bluesky }) => (
     <article className="person">
       <div className="person__photo"><img src={img} alt={name} loading="lazy" /></div>
       <div className="person__body">
-        <h3 className="person__name"><a href="#">{name}</a></h3>
+        <h5 className="person__name"><a href="#">{name}</a></h5>
         <p className="person__role">{role}</p>
-        <ul className="person__contact person__contact--icons">
-          {email && <li><a href={"mailto:" + email} className="person__icon" aria-label={"Email " + name}><MailIcon /></a></li>}
-          {linkedin && <li><a href={linkedin} className="person__icon" aria-label={name + " on LinkedIn"}><LinkedInIcon /></a></li>}
-          {x && <li><a href={x} className="person__icon" aria-label={name + " on X"}><XIcon /></a></li>}
-          {bluesky && <li><a href={bluesky} className="person__icon" aria-label={name + " on Bluesky"}><BlueskyIcon /></a></li>}
-        </ul>
       </div>
     </article>
   );
@@ -141,58 +130,27 @@ function PeoplePage() {
     { id: "investments", title: "Investments", people: investments },
   ];
 
-  const [navOpen, setNavOpen] = React.useState(true);
-  const [pinned, setPinned] = React.useState(false);
-  const [current, setCurrent] = React.useState(sections[0].title);
-  const jlRef = React.useRef(null);
-  const userToggled = React.useRef(false);
 
   React.useEffect(() => {
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting) {
-          const sec = sections.find(s => s.id === en.target.id);
-          if (sec) setCurrent(sec.title);
-        }
-      });
-    }, { rootMargin: "-30% 0px -60% 0px" });
-    sections.forEach(s => { const el = document.getElementById(s.id); if (el) obs.observe(el); });
-
-    const nav = jlRef.current;
-    const inline = document.querySelector('.jumplinks--inline');
-    let pinObs;
-    if (inline) {
-      pinObs = new IntersectionObserver(([e]) => {
-        const isPinnedNow = !e.isIntersecting;
-        userToggled.current = false;
-        setPinned(isPinnedNow);
-        setNavOpen(false);
-      }, { threshold: 0, rootMargin: "-42px 0px 0px 0px" });
-      pinObs.observe(inline);
-    }
-
     // Native <details> hides content when closed regardless of CSS, so on
     // desktop we force every section open; on mobile only directors starts open.
-    const frame = nav && nav.closest('.proto-stage__frame');
+    const frame = document.querySelector('.proto-stage__frame');
     let prevWide = null;
     const syncOpen = () => {
       const wide = frame ? frame.clientWidth > 820 : window.innerWidth > 820;
       if (wide === prevWide) return;
       prevWide = wide;
-      const secs = document.querySelectorAll('.people-section');
-      secs.forEach((d, i) => { if (wide) d.open = true; else d.open = (i === 0); });
+      document.querySelectorAll('.people-section').forEach((d, i) => { d.open = wide ? true : (i === 0); });
     };
     syncOpen();
     let ro;
     if (frame && 'ResizeObserver' in window) { ro = new ResizeObserver(syncOpen); ro.observe(frame); }
     else window.addEventListener('resize', syncOpen);
-
-    return () => { obs.disconnect(); if (pinObs) pinObs.disconnect(); if (ro) ro.disconnect(); else window.removeEventListener('resize', syncOpen); };
+    return () => { if (ro) ro.disconnect(); else window.removeEventListener('resize', syncOpen); };
   }, []);
 
   const jump = (e, id) => {
     e.preventDefault();
-    setNavOpen(false);
     const el = document.getElementById(id);
     if (!el) return;
     el.open = true;
@@ -217,51 +175,6 @@ function PeoplePage() {
           </div>
         </div>
       </section>
-
-      <div className="jumplinks-sentinel" aria-hidden="true"></div>
-
-      <nav className="jumplinks jumplinks--inline" aria-label="You are currently reading">
-        <div className="jumplinks__panel jumplinks__panel--static">
-          <div className="container">
-            <div className="jumplinks__current jumplinks__current--inline">
-              <span className="jumplinks__current-label">You are currently reading:</span>
-              <span className="jumplinks__current-title">{current}</span>
-            </div>
-          </div>
-          <hr className="jumplinks__keyline" aria-hidden="true" />
-          <div className="container">
-            <ul className="jumplinks__grid">
-              {sections.map(s => (
-                <li key={s.id}><a href={"#" + s.id} onClick={(e) => jump(e, s.id)}>{s.title}</a></li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <nav ref={jlRef} className={"jumplinks jumplinks--pinned" + (navOpen ? " is-open" : "") + (pinned ? " is-visible" : "")} aria-label="On this page" aria-hidden={!pinned}>
-        <div className="jumplinks__bar">
-          <div className="container jumplinks__bar-inner">
-            <span className="jumplinks__current">
-              <span className="jumplinks__current-label">You are currently reading:</span>
-              <span className="jumplinks__current-title">{current}</span>
-            </span>
-            <button type="button" className="jumplinks__toggle" aria-expanded={navOpen} aria-controls="jumplinks-list" tabIndex={pinned ? 0 : -1} onClick={() => { userToggled.current = true; setNavOpen(o => !o); }}>
-              <span>{navOpen ? "Close" : "View all sections"}</span>
-              <span className="jumplinks__toggle-icon material-symbols-outlined" aria-hidden="true">expand_more</span>
-            </button>
-          </div>
-        </div>
-        <div id="jumplinks-list" className="jumplinks__panel">
-          <div className="container">
-            <ul className="jumplinks__grid">
-              {sections.map(s => (
-                <li key={s.id}><a href={"#" + s.id} onClick={(e) => jump(e, s.id)}>{s.title}</a></li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
 
       {sections.map((s, idx) => (
         <details key={s.id} id={s.id} className={"section people-section section--" + (idx % 2 === 0 ? "cream" : "paper")} open={idx === 0}>
