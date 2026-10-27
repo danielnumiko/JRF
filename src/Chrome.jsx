@@ -39,19 +39,46 @@ function SiteHeader() {
           <JrfLogo />
         </a>
         <nav className="site-nav" aria-label="Primary">
-          <div className="site-nav__item">
+          <div className="site-nav__item site-nav__item--mega">
             <button type="button" onClick={() => toggle('topics')} aria-expanded={open === 'topics'}><span className="site-nav__label">Topics</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'topics' && (
-              <div className="site-nav__panel">
-                <a href="#" onClick={nav('climate')}>Climate change</a>
-                <a href="#">Child poverty</a>
-                <a href="#">Cost of living</a>
-                <a href="#">Housing</a>
-                <a href="#" onClick={nav('narrative')}>Narrative change</a>
-                <a href="#">Neighbourhoods and communities</a>
-                <a href="#">Power and participation</a>
-                <a href="#">Social security</a>
-                <a href="#">Work</a>
+              <div className="site-nav__panel site-nav__panel--mega">
+                <div className="container">
+                  <div className="site-nav__mega-grid">
+                    <div className="site-nav__col">
+                      <h3 className="site-nav__col-title">Work and family</h3>
+                      <ul>
+                        <li><a href="#">Care</a></li>
+                        <li><a href="#">Child poverty</a></li>
+                        <li><a href="#">Cost of living</a></li>
+                        <li><a href="#">Deep poverty and destitution</a></li>
+                        <li><a href="#">Income, savings and debt</a></li>
+                        <li><a href="#">Social security</a></li>
+                        <li><a href="#">Work</a></li>
+                      </ul>
+                    </div>
+                    <div className="site-nav__col">
+                      <h3 className="site-nav__col-title">Community and place</h3>
+                      <ul>
+                        <li><a href="#" onClick={nav('climate')}>Climate change</a></li>
+                        <li><a href="#">Housing</a></li>
+                        <li><a href="#">Imagination infrastructures</a></li>
+                        <li><a href="#">Neighbourhoods and communities</a></li>
+                        <li><a href="#">Race and ethnicity</a></li>
+                      </ul>
+                    </div>
+                    <div className="site-nav__col">
+                      <h3 className="site-nav__col-title">Changing society</h3>
+                      <ul>
+                        <li><a href="#" onClick={nav('narrative')}>Narrative change</a></li>
+                        <li><a href="#">Power and participation</a></li>
+                        <li><a href="#">Public attitudes</a></li>
+                        <li><a href="#">Understanding poverty</a></li>
+                        <li><a href="#">Wealth, funding and investment practice</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
           </div>
