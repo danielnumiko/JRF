@@ -336,6 +336,7 @@ a { color: inherit; }
   gap: 48px;
   align-items: start;
 }
+.site-nav__mega-grid--4 { grid-template-columns: repeat(4, 1fr); }
 .site-nav__col-title {
   margin: 0 0 20px;
   color: #fff;
@@ -357,7 +358,8 @@ a { color: inherit; }
 .site-nav__panel--mega a:hover,
 .site-nav__panel--mega a:focus-visible { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
 @container stage (max-width: 900px) {
-  .site-nav__mega-grid { grid-template-columns: 1fr; gap: 32px; }
+  .site-nav__mega-grid,
+  .site-nav__mega-grid--4 { grid-template-columns: 1fr; gap: 32px; }
   .site-nav__panel.site-nav__panel--mega { padding: 32px 0 40px; }
 }
 .site-header__right { display: inline-flex; align-items: center; gap: 14px; }

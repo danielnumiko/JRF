@@ -96,16 +96,39 @@ function SiteHeader() {
           <div className="site-nav__item">
             <button type="button"><span className="site-nav__label">UK poverty statistics</span></button>
           </div>
-          <div className="site-nav__item">
+          <div className="site-nav__item site-nav__item--mega">
             <button type="button" onClick={() => toggle('about')} aria-expanded={open === 'about'}><span className="site-nav__label">About</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'about' && (
-              <div className="site-nav__panel">
-                <a href="#">Vision, mission and principles</a>
-                <a href="#">Background and history</a>
-                <a href="#" onClick={nav('people')}>Our people</a>
-                <a href="#">Funding</a>
-                <a href="#">Careers</a>
-                <a href="#">Contact us</a>
+              <div className="site-nav__panel site-nav__panel--mega">
+                <div className="container">
+                  <div className="site-nav__mega-grid site-nav__mega-grid--4">
+                    <div className="site-nav__col">
+                      <ul>
+                        <li><a href="#">Vision, mission and principles</a></li>
+                        <li><a href="#" onClick={nav('people')}>Our people</a></li>
+                        <li><a href="#">Governance information</a></li>
+                      </ul>
+                    </div>
+                    <div className="site-nav__col">
+                      <ul>
+                        <li><a href="#">Background and history</a></li>
+                        <li><a href="#">Funding</a></li>
+                      </ul>
+                    </div>
+                    <div className="site-nav__col">
+                      <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Social investment</a></li>
+                      </ul>
+                    </div>
+                    <div className="site-nav__col">
+                      <ul>
+                        <li><a href="#">Our trustees</a></li>
+                        <li><a href="#">Contact us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
           </div>
