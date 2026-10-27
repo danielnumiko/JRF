@@ -20,14 +20,21 @@ function App() {
 
   React.useEffect(() => {
     try { localStorage.setItem('jrf_proto_page', pageId); } catch {}
-    // Scroll page area to top on tab change
+    // Scroll both the stage element and the window to the top on page change.
     const el = document.querySelector('.proto-stage');
     if (el) el.scrollTop = 0;
+    try { window.scrollTo(0, 0); } catch {}
   }, [pageId]);
 
   React.useEffect(() => {
     try { localStorage.setItem('jrf_proto_viewport', viewport); } catch {}
   }, [viewport]);
+
+  // Expose a global so SiteHeader / page links can switch pages without props drilling.
+  React.useEffect(() => {
+    window.navigate = (id) => setPageId(id);
+    return () => { try { delete window.navigate; } catch {} };
+  }, []);
 
   const current = PAGES.find(p => p.id === pageId) || PAGES[0];
   const VIEWPORTS = [

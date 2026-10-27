@@ -5,7 +5,7 @@ function ClimatePage() {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <div className="container">
           <ol>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" onClick={(e) => { e.preventDefault(); window.navigate && window.navigate('home'); }}>Home</a></li>
             <li><a href="#">Wealth, funding and investment practice</a></li>
           </ol>
         </div>
@@ -31,7 +31,7 @@ function ClimatePage() {
             <dt>Written by:</dt>
             <dd>
               <span className="article__author-pic" aria-hidden="true"><img src={R('jessica', 'assets/jessica.png')} alt="" /></span>
-              <a href="#" className="text-link">Jessica Harneyford</a>
+              <a href="#" className="text-link" onClick={(e) => { e.preventDefault(); window.navigate && window.navigate('people'); }}>Jessica Harneyford</a>
             </dd>
           </div>
           <div>

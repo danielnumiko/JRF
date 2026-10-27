@@ -12,6 +12,7 @@ function NarrativePage() {
   ];
 
   const items = [
+    { date: "20 August 2026", tags: ["Explainer", "Climate change", "Wealth, funding and investment practice"], title: "Social investment opportunities for funds supporting UK climate justice", body: "Climate justice is one of our new social investment themes. We're looking to invest into funds supporting community renewable energy projects.", nav: "climate" },
     { date: "14 August 2026", tags: ["Reflection", "Neighbourhoods and communities", "Narrative change", "Power and participation"], title: "Capturing hope and resilience in communities tackling hardship", body: "Over the past 3 years, JRF has been on a learning journey, working with community groups across the UK, to develop a more ethical, representative approach to our visual storytelling, with co-creation at the centre." },
     { date: "30 July 2026", tags: ["Reflection", "Imagination infrastructures", "Narrative change"], title: "Why Futures in Draft matters to us all", body: "After nearly two years of collaboration, Storythings and JRF are launching Futures in Draft — a new platform sharing the people and stories transforming our tomorrow." },
     { date: "16 July 2026", tags: ["Resource", "Narrative change", "Housing"], title: "Talking about Homes: 3 top tips for effective explanation", body: "Our current housing system isn't working for everyone. Here's how to explain why, build understanding, counteract fatalism, and increase support for solutions." },
@@ -31,7 +32,7 @@ function NarrativePage() {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <div className="container">
           <ol>
-            <li><a href="#">Home</a></li>
+            <li><a href="#" onClick={(e) => { e.preventDefault(); window.navigate && window.navigate('home'); }}>Home</a></li>
           </ol>
         </div>
       </nav>
@@ -119,7 +120,7 @@ function NarrativePage() {
             </aside>
             <div className="discover-list">
               {items.map((it, i) => (
-                <a key={i} href="#" className="list-item">
+                <a key={i} href="#" className="list-item" onClick={it.nav ? (e) => { e.preventDefault(); window.navigate && window.navigate(it.nav); } : undefined}>
                   <div className="list-item__date"><time>{it.date}</time></div>
                   <h3 className="list-item__title"><span className="u-line">{it.title}</span></h3>
                   <p className="list-item__body">{it.body}</p>

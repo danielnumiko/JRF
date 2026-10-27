@@ -13,26 +13,41 @@ function JrfLogo() {
 }
 window.JrfLogo = JrfLogo;
 
+// Prototype helper: navigate to a top-level page via the global exposed by App.jsx.
+function go(page) {
+  if (typeof window !== 'undefined' && typeof window.navigate === 'function') {
+    window.navigate(page);
+  }
+}
+
 function SiteHeader() {
-  const open = null;
-  const onEnter = () => {};
-  const onLeave = () => {};
+  const [open, setOpen] = React.useState(null);
+  const toggle = (key) => setOpen((o) => (o === key ? null : key));
+  const close = () => setOpen(null);
+  const nav = (page) => (e) => { e.preventDefault(); close(); go(page); };
+
+  React.useEffect(() => {
+    const onDoc = (e) => { if (!e.target.closest('.site-nav__item')) setOpen(null); };
+    document.addEventListener('click', onDoc);
+    return () => document.removeEventListener('click', onDoc);
+  }, []);
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a href="#" className="site-logo" aria-label="Joseph Rowntree Foundation home">
+        <a href="#" onClick={(e) => { e.preventDefault(); go('home'); }} className="site-logo" aria-label="Joseph Rowntree Foundation home">
           <JrfLogo />
         </a>
         <nav className="site-nav" aria-label="Primary">
-          <div className="site-nav__item" onMouseEnter={() => onEnter('topics')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'topics'}><span className="site-nav__label">Topics</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+          <div className="site-nav__item">
+            <button type="button" onClick={() => toggle('topics')} aria-expanded={open === 'topics'}><span className="site-nav__label">Topics</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'topics' && (
               <div className="site-nav__panel">
-                <a href="#">Climate change</a>
+                <a href="#" onClick={nav('climate')}>Climate change</a>
                 <a href="#">Child poverty</a>
                 <a href="#">Cost of living</a>
                 <a href="#">Housing</a>
-                <a href="#">Narrative change</a>
+                <a href="#" onClick={nav('narrative')}>Narrative change</a>
                 <a href="#">Neighbourhoods and communities</a>
                 <a href="#">Power and participation</a>
                 <a href="#">Social security</a>
@@ -40,8 +55,8 @@ function SiteHeader() {
               </div>
             )}
           </div>
-          <div className="site-nav__item" onMouseEnter={() => onEnter('news')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'news'}><span className="site-nav__label">News and events</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+          <div className="site-nav__item">
+            <button type="button" onClick={() => toggle('news')} aria-expanded={open === 'news'}><span className="site-nav__label">News and events</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'news' && (
               <div className="site-nav__panel">
                 <a href="#">News</a>
@@ -54,13 +69,13 @@ function SiteHeader() {
           <div className="site-nav__item">
             <button type="button"><span className="site-nav__label">UK poverty statistics</span></button>
           </div>
-          <div className="site-nav__item" onMouseEnter={() => onEnter('about')} onMouseLeave={onLeave}>
-            <button type="button" aria-expanded={open === 'about'}><span className="site-nav__label">About</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
+          <div className="site-nav__item">
+            <button type="button" onClick={() => toggle('about')} aria-expanded={open === 'about'}><span className="site-nav__label">About</span> <span className="material-symbols-outlined site-nav__chev">expand_more</span></button>
             {open === 'about' && (
               <div className="site-nav__panel">
                 <a href="#">Vision, mission and principles</a>
                 <a href="#">Background and history</a>
-                <a href="#">Our people</a>
+                <a href="#" onClick={nav('people')}>Our people</a>
                 <a href="#">Funding</a>
                 <a href="#">Careers</a>
                 <a href="#">Contact us</a>
@@ -152,7 +167,7 @@ function SiteFooter() {
                 <li><a href="#">Background and history</a></li>
                 <li><a href="#">Publications</a></li>
                 <li><a href="#">Careers</a></li>
-                <li><a href="#">Our people</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); go('people'); }}>Our people</a></li>
                 <li><a href="#">Contact us</a></li>
               </ul>
             </div>

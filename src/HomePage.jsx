@@ -44,7 +44,7 @@ function HomePage() {
               </div>
               <div className="pinned-feed__lead-body">
                 <span className="pinned-feed__lead-flag">Featured — 14 August 2026</span>
-                <h3 className="pinned-feed__lead-title"><span className="u-line">Getting homes built: why social and affordable capacity is key</span></h3>
+                <h3 className="pinned-feed__lead-title"><a href="#" className="pinned-feed__lead-link" onClick={(e) => { e.preventDefault(); window.navigate && window.navigate('narrative'); }}><span className="u-line">Getting homes built: why social and affordable capacity is key</span></a></h3>
                 <p className="pinned-feed__lead-lede">The Government can support housebuilding by increasing the financial capacity of social and affordable housing providers — here's how it could unlock the next 100,000 homes.</p>
                 <Eyebrow tags={["Briefing", "Housing"]} />
               </div>

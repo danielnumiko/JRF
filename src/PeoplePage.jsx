@@ -161,7 +161,7 @@ function PeoplePage() {
   return (
     <>
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <div className="container"><ol><li><a href="#">Home</a></li></ol></div>
+        <div className="container"><ol><li><a href="#" onClick={(e) => { e.preventDefault(); window.navigate && window.navigate('home'); }}>Home</a></li></ol></div>
       </nav>
 
       <section className="hero hero--split hero--navy">
