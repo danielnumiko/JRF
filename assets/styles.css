@@ -1036,15 +1036,11 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 @container stage (max-width: 1024px) { .people-grid { grid-template-columns: repeat(3, 1fr); } }
 @container stage (max-width: 768px) { .people-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6, 24px); } }
 @container stage (max-width: 420px) { .people-grid { grid-template-columns: 1fr; } }
-/* Accordion behaviour — mobile only (jump nav collapses department content) */
 .jumplinks--inline .jumplinks__panel--static { border-top: none; }
 @container stage (max-width: 820px) {
   .jumplinks { display: none; }
-  .people-section__summary { cursor: pointer; }
-  .people-section__chevron { display: inline-flex; }
-  .people-section[open] .people-section__chevron { transform: rotate(180deg); }
   .people-section > .container:last-child { padding-bottom: var(--space-8, 32px); }
-  .people-section[open] > .container:last-child { padding-top: var(--space-6, 24px); }
+  .people-section > .container:last-child { padding-top: var(--space-6, 24px); }
   .people-section__summary .h-section { margin-bottom: 0; }
 }
 /* Desktop: always expanded regardless of details state */

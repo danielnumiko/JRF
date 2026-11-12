@@ -132,21 +132,16 @@ function PeoplePage() {
 
 
   React.useEffect(() => {
-    // Native <details> hides content when closed regardless of CSS, so on
-    // desktop we force every section open; on mobile only directors starts open.
-    const frame = document.querySelector('.proto-stage__frame');
-    let prevWide = null;
-    const syncOpen = () => {
-      const wide = frame ? frame.clientWidth > 820 : window.innerWidth > 820;
-      if (wide === prevWide) return;
-      prevWide = wide;
-      document.querySelectorAll('.people-section').forEach((d, i) => { d.open = wide ? true : (i === 0); });
-    };
-    syncOpen();
-    let ro;
-    if (frame && 'ResizeObserver' in window) { ro = new ResizeObserver(syncOpen); ro.observe(frame); }
-    else window.addEventListener('resize', syncOpen);
-    return () => { if (ro) ro.disconnect(); else window.removeEventListener('resize', syncOpen); };
+    // Keep every section open at all viewport sizes — no accordion.
+    // Native <details> would default any non-[open] one to closed on first
+    // paint, and a summary tap would collapse it, so we force open on mount
+    // and reopen if the toggle event ever fires.
+    const sections = document.querySelectorAll('.people-section');
+    const openAll = () => sections.forEach((d) => { d.open = true; });
+    openAll();
+    const onToggle = (e) => { if (!e.target.open) e.target.open = true; };
+    sections.forEach((d) => d.addEventListener('toggle', onToggle));
+    return () => sections.forEach((d) => d.removeEventListener('toggle', onToggle));
   }, []);
 
   const jump = (e, id) => {
