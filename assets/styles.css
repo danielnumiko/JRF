@@ -375,7 +375,8 @@ a { color: inherit; }
   align-items: center; gap: 6px; color: var(--navy); font: inherit; font-size: var(--text-body-sm); font-weight: 400;
 }
 .site-header__menu-btn:hover { color: var(--blue); }
-.site-header__menu-label { line-height: 1; }
+.site-header__menu-label { line-height: 1; white-space: nowrap; }
+.site-header__search-btn > span:first-child { white-space: nowrap; }
 .site-header__menu-icon { display: inline-flex; flex-direction: column; gap: 4px; }
 .site-header__menu-icon span { display: block; width: 22px; height: 2px; background: var(--navy); }
 @container stage (max-width: 1024px) {
