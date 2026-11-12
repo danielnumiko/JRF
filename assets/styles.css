@@ -541,7 +541,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .hero--navy .hero__lede { color: #a0d7e3; max-width: none; }
 .hero__split-media { background: #c4d9e3; overflow: hidden; }
 .hero__split-media img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; min-height: 100%; }
-.hero__lede { font-size: var(--text-body-sm); line-height: 1.5; margin: 16px 0 24px; font-weight: 300; color: var(--navy); max-width: none; }
+.hero__lede { font-size: var(--text-body-sm); line-height: 1.5; margin: 26px 0 24px; font-weight: 300; color: var(--navy); max-width: none; }
 .hero__split-copy h1,
 .hero__split-copy .hero__lede { max-width: 100%; width: 100%; }
 .hero__split-copy .btn { justify-content: center; }
@@ -588,7 +588,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
   .hero__split-copy { padding: var(--section-pad) 32px; max-width: 100%; }
   .hero__split-media { aspect-ratio: 16/9; }
   .hero__split-copy .btn { align-self: stretch; padding: 22px 32px; width: 100%; max-width: 100%; }
-  .hero--split .hero__lede { margin: 10px 0 18px; }
+  .hero--split .hero__lede { margin: 20px 0 18px; }
 }
 
 /* Feature card (big article block) */
@@ -1530,7 +1530,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
   .footer-col ul { gap: 14px; }
   .feature__inner { gap: 24px; }
   .hero__split-copy { padding: var(--section-pad) 20px; }
-  .hero--split .hero__lede { margin: 12px 0 20px; font-size: var(--text-body-sm); }
+  .hero--split .hero__lede { margin: 22px 0 20px; font-size: var(--text-body-sm); }
   h1, .h1 { margin-bottom: 12px; }
   h2, .h2 { margin-bottom: 12px; }
   .card__media { margin-bottom: 12px; }
