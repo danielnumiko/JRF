@@ -85,13 +85,14 @@ function NarrativePage() {
         <div className="container">
           <h2 className="h-section">Toolkit and resources for talking about homes</h2>
           <p className="section__intro">The toolkit and resources below are useful for anyone who is talking and writing about housing and homes.</p>
-          <div className="card-grid card-grid--4">
+          <div className="card-grid">
             {toolkit.map((c, i) => (
               <a key={i} href="#" className="card">
                 <div className="card__media">
                   <img src={R('toolkit'+(i+1), `assets/toolkit-${i+1}.png`)} alt="" />
                 </div>
                 <h3 className="card__title"><span className="u-line">{c.title}</span></h3>
+                <p className="card__body">{c.body}</p>
                 <Eyebrow tags={c.tags} variant="onDark" />
               </a>
             ))}
