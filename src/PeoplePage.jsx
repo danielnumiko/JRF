@@ -177,7 +177,7 @@ function PeoplePage() {
       </section>
 
       {sections.map((s, idx) => (
-        <details key={s.id} id={s.id} className={"section people-section section--" + (idx % 2 === 0 ? "cream" : "paper")} open={idx === 0}>
+        <details key={s.id} id={s.id} className="section people-section section--cream" open={idx === 0}>
           <summary className="people-section__summary">
             <div className="container">
               <h2 className="h-section">{s.title}</h2>

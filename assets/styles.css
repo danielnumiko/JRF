@@ -1023,6 +1023,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .people-jump__list a { color: #fff; text-decoration: none; font-size: var(--text-body-sm); font-weight: 300; }
 
 .people-section { display: block; }
+.people-section + .people-section { border-top: 2px solid var(--navy); }
 .people-section__summary { list-style: none; cursor: default; }
 .people-section__summary::-webkit-details-marker { display: none; }
 .people-section__summary .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4, 16px); }
