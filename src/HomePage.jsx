@@ -34,7 +34,7 @@ function HomePage() {
       <section className="section section--cream">
         <div className="container">
           <div className="section__head">
-            <h2 className="h-section">Latest</h2>
+            <h2 className="h-section">Featured work</h2>
           </div>
 
           <div className="pinned-feed">
