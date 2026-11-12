@@ -679,7 +679,7 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
     column-gap: 32px;
     align-items: center;
   }
-  .card-grid .card__media, .card-grid--4 .card__media { grid-column: 1; grid-row: 1 / span 99; align-self: stretch; height: 100%; margin-bottom: 0; }
+  .card-grid .card__media, .card-grid--4 .card__media { grid-column: 1; grid-row: 1 / span 99; align-self: stretch; height: 100%; width: 100%; min-width: 0; aspect-ratio: auto; margin-bottom: 0; }
   .card-grid .card > :not(.card__media),
   .card-grid--4 .card > :not(.card__media) { grid-column: 2; }
 }
