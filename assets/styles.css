@@ -1820,6 +1820,11 @@ h5, .h5 { font-size: var(--text-h5); line-height: 1.35; }
 .related p,
 .footer-co, .footer-address, .footer-phone, .footer-base { font-weight: 300; }
 
+/* Lighten white-on-navy headings — card titles on navy card grids and
+   the navy feature block (e.g. UK Poverty 2026). */
+.section--navy .card__title,
+.feature--navy .feature__title { font-weight: 300; }
+
 /* Footer links use the CTA token */
 .footer-col a { font-size: var(--text-cta); }
 
